@@ -86,3 +86,80 @@ button:hover {
 .footer a:hover {
   text-decoration: underline;
 }
+
+.home-page .container {
+  width: 420px;
+  text-align: center;
+}
+
+.home-page h1 {
+  color: #6c63ff;
+  margin-bottom: 5px;
+  font-size: 28px;
+}
+
+.home-page .subtitle {
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.home-page .result-box {
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.home-page .result-box p {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #2e7d32;
+}
+
+.home-page .short-url {
+  color: #6c63ff;
+  font-weight: bold;
+  font-size: 16px;
+  word-break: break-all;
+}
+
+.home-page .form-group {
+  margin-bottom: 15px;
+}
+
+.home-page .form-group label {
+  text-align: left;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.home-page .form-group input {
+  margin-bottom: 15px;
+}
+
+.home-page .btn-primary {
+  margin-top: 10px;
+}
+
+.home-page .btn-secondary {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #6c63ff;
+  background: white;
+  color: #6c63ff;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.home-page .btn-secondary:hover {
+  background: #6c63ff;
+  color: white;
+}

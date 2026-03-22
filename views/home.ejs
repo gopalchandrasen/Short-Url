@@ -4,22 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ShorURL</title>
+    <link rel="stylesheet" href="/styles.css" />
   </head>
-  <body>
-    <h1>URL shortner.</h1>
-    <% if (locals.id) { %>
-    <a>http://localhost:8002/<%= id %></a>
-    <% } %>
-    <div>
-      <form method="POST" action="/url/newUser">
-        <label for="">Enter your original url</label>
-        <input type="text" name="url" placeholder="https://example.com" />
-        <button type="submit">Generate</button>
-      </form>
-    </div>
+  <body class="home-page">
+    <div class="container">
+      <h1>URL Shortener</h1>
+      <p class="subtitle">Make your links shorter and smarter</p>
+      
+      <% if (locals.id) { %>
+      <div class="result-box">
+        <p>Your shortened URL:</p>
+        <a href="http://localhost:8002/<%= id %>" class="short-url">http://localhost:8002/<%= id %></a>
+      </div>
+      <% } %>
+      
+      <div class="form-group">
+        <form method="POST" action="/url/newUser">
+          <label for="url">Enter your original URL</label>
+          <input type="text" name="url" id="url" placeholder="https://example.com" required />
+          <button type="submit" class="btn-primary">Generate Short URL</button>
+        </form>
+      </div>
 
-    <a href="/url/viewAll">
-      <button type="button">View All URLs</button>
-    </a>
+      <a href="/url/viewAll" class="btn-secondary">View All URLs</a>
+    </div>
   </body>
 </html>
