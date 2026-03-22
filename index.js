@@ -17,6 +17,7 @@ app.set("views", path.resolve("./views"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(express.static(path.resolve("./public")));
 
 app.use("/", urlRoute);
 app.use("/url", restrictToLoggedInUserOnly, urlRoute);
