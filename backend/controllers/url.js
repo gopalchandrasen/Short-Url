@@ -79,12 +79,15 @@ async function handleGetShortId(req, res) {
 }
 
 async function handleViewAll(req, res) {
-  const allurls = await URL.find({ createdBy: req.user._id });
-  return res.render("viewsAll", {
-    urls: allurls,
-  });
+  try {
+    const allurls = await URL.find({ createdBy: req.user._id }).sort({
+      createdAt: -1,
+    });
+    return res.json({ urls: allurls });
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
 }
-
 
 module.exports = {
   handleGenerateNewShortURL,
